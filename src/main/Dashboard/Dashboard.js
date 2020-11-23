@@ -139,7 +139,7 @@ data.append('upload_preset','profiles')
  setImage(fileuploadedurl.secure_url)
  const userImage={
   email:email,
-  url:fileuploadedurl.secure_url
+  imgurl:fileuploadedurl.secure_url
 }
  axios({
   method: 'POST',
