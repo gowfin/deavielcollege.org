@@ -24,13 +24,18 @@ export default function Dashboard(xx) {
      const sendGetRequest = async () => {
       setEmail(xx.match.params.email)
       try {
+          console.log(xx.match.params.email);
           const resp = await axios.get(`${BASE_URL}/auth/profileimage/${xx.match.params.email}`);
-          if(resp.data.toString.length>0){
+          let none=resp.data
+          if(none.length>7){
             setImage(resp.data);
-            console.log(resp.data);
+            
           }else{
+            //setImage(resp.data);
             setImage("https://res.cloudinary.com/helping-hands-for-active-people/image/upload/v1602859081/profiles/upu6yfl5ucmocwmefsvv.png")
           }
+          console.log(resp.data.imgurl);
+         
           
            
         //  console.log(resp.data);
