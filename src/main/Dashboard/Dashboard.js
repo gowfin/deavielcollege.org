@@ -93,8 +93,8 @@ export default function Dashboard(xx) {
  
   const [fileInputState, setFileInputState] = useState('');
     const [previewSource, setPreviewSource] = useState('');
-    // const [selectedFile, setSelectedFile] = useState();
-    const [setSelectedFile] = useState();
+    const [selectedFile, setSelectedFile] = useState();
+   // const [setSelectedFile] = useState();
     const [successMsg] = useState('');
     const [errMsg] = useState('');
     const handleFileInputChange = (e) => {
